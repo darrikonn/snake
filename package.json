@@ -1,0 +1,241 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "engines": {
+    "npm": "please-use-yarn",
+    "node": "^20.2.0",
+    "pnpm": "please-use-yarn",
+    "yarn": "^4.0.2"
+  },
+  "main": "src/index.tsx",
+  "repository": "https://github.com/darrikonn/snake.git",
+  "author": "Darri Steinn Konradsson <darrikonn@gmail.com>",
+  "license": "none",
+  "private": true,
+  "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "prettier": "prettier --write src/**/*.{ts,tsx,js,jsx}",
+    "prettier:check": "prettier --check src/**/*.{ts,tsx,js,jsx}",
+    "lint": "yarn eslint && yarn prettier:check",
+    "format": "yarn eslint:fix && yarn prettier",
+    "upgrade:all": "yarn-upgrade-all",
+    "start": "vite serve",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "postcss": "^8.4.31",
+    "prettier": "^3.1.0",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "yarn-upgrade-all": "^0.7.2"
+  },
+  "eslintConfig": {
+    "settings": {
+      "react": {
+        "version": "18.2.0"
+      }
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "prettier",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "react",
+      "@typescript-eslint",
+      "import",
+      "simple-import-sort",
+      "markdown"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2016,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true,
+      "jest": true
+    },
+    "globals": {
+      "__DEV__": true
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.js"
+        ],
+        "rules": {
+          "@typescript-eslint/no-var-requires": "off"
+        }
+      },
+      {
+        "files": [
+          "*.ts",
+          "*.tsx",
+          "*.js",
+          "*.jsx"
+        ],
+        "rules": {
+          "simple-import-sort/imports": [
+            "error",
+            {
+              "groups": [
+                [
+                  "^\\u0000"
+                ],
+                [
+                  "^react",
+                  "^@?\\w"
+                ],
+                [
+                  "^(snake)(/.*|$)"
+                ],
+                [
+                  "^\\.\\.(?!/?$)",
+                  "^\\.\\./?$"
+                ],
+                [
+                  "^\\./(?=.*/)(?!/?$)",
+                  "^\\.(?!/?$)",
+                  "^\\./?$"
+                ],
+                [
+                  "^.+\\.s?css$"
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "arrow-body-style": "off",
+      "arrow-parens": "off",
+      "camelcase": "off",
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "function-paren-newline": "off",
+      "global-require": "off",
+      "new-cap": "off",
+      "no-console": "warn",
+      "no-mixed-operators": "off",
+      "no-underscore-dangle": "off",
+      "object-curly-newline": "off",
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "spaced-comment": "warn",
+      "no-restricted-imports": [
+        "error",
+        {
+          "paths": [
+            "lodash",
+            "date-fns",
+            "date-fns/locale",
+            "."
+          ]
+        }
+      ],
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+      "import/first": "error",
+      "import/newline-after-import": "error",
+      "import/no-duplicates": "error",
+      "react/jsx-filename-extension": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-curly-brace-presence": [
+        "error",
+        {
+          "props": "never",
+          "children": "never"
+        }
+      ],
+      "react/no-multi-comp": [
+        "error",
+        {
+          "ignoreStateless": true
+        }
+      ],
+      "react/require-default-props": "off",
+      "react/jsx-boolean-value": [
+        "error",
+        "never"
+      ],
+      "jsx-quotes": [
+        "error",
+        "prefer-double"
+      ],
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-extra-semi": "off",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-inferrable-types": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "ignoreRestSiblings": true,
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "insertPragma": false,
+    "bracketSameLine": false,
+    "printWidth": 100,
+    "proseWrap": "never",
+    "requirePragma": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "packageManager": "yarn@4.0.2"
+}

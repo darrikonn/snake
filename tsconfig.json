@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "lib": [
+      "es2022",
+      "dom",
+      "dom.iterable"
+    ],
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "noEmit": true,
+    "declaration": true,
+    "composite": true,
+    "sourceMap": true,
+    "declarationMap": true,
+
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "jsx": "react",
+    "tsBuildInfoFile": "/tmp/tsconfig.tsbuildinfo"
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}
